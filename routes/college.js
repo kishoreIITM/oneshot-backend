@@ -17,7 +17,7 @@ router.route('/:id')
             
             if (simstate.length == 1){
               if (college.students){
-                colleges.find({students:{$lte: college.students+50, $gte:college.students-50}})
+                colleges.find({students:{$lte: college.students+500, $gte:college.students-500}})
               .then(simstud=>{
                 if (simstud.lenght==1){
                   simstud=[]
@@ -43,5 +43,7 @@ router.route('/:id')
     
   })
 })
+
+
 
 module.exports = router;
